@@ -1,0 +1,19 @@
+#click-zone {
+  margin: 50 0 0 50;
+  border: 3px solid black;
+  display: inline-block;
+}
+
+.row {
+  clear: left;
+}
+
+.clicker {
+  height: 50px;
+  width: 50px;
+  float: left;
+}
+
+.lit {
+  background-color: red;
+}
