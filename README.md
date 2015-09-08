@@ -14,4 +14,4 @@ I have invented the most mind-numbing game imaginable. You just click on squares
 2. There should be no calls to the model from the view.
 3. There should be no DOM manipulation in the model. (Don't add a call to the view instead!)
 4. Find somewhere secure to store the canonical score. (If a player edits the `#score` span in the console, it should reset on their next click.)
-5. If you complete 1 to 4, implement a version of the game where the board redraws one size larger after every 100 points.
+5. If you complete 1 to 4, implement a version of the game where the board size iterates up by 1 after every 100 points.
