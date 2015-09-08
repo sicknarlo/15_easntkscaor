@@ -27,13 +27,19 @@ JC.view = {
                      row.append( "<div class='clicker' data-x='" + x + "' data-y='" + y + "'></div>" )
                    },
 
+  updateScore: function(){
+                 var $scoreSpan = $( "#score" )
+                 $scoreSpan.text(JC.model.score);
+  },
+
   // This sets up the click listener on each square.
 
   attachListeners: function(){
                      $( ".clicker" ).click( function(){
                        var $square = $( this )
                        $square.removeClass( "lit" );
-                       JC.model.scoreClick($square.data().x, $square.data().y);
+                       JC.controller.clickSquare($square);
+                       // JC.model.scoreClick($square.data().x, $square.data().y);
                    })},
 
   // This turns a square red.

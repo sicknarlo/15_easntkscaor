@@ -5,6 +5,7 @@ JC.model = {
   // Holds squares that are currently lit up on the board.
 
   activeSquares: [],
+  score: 0,
 
   // Randomly generates a pair of coordinates.
 
@@ -23,8 +24,8 @@ JC.model = {
                   var testSquare = this.activeSquares[i];
                   if( testSquare.x === x && testSquare.y === y ) {
                     this.incrementUpScore();
-                    this.activeSquares.splice(i, 1); 
-                    break;                    
+                    this.activeSquares.splice(i, 1);
+                    break;
                   };
                   break;
                 };
@@ -32,9 +33,10 @@ JC.model = {
 
   // Adds a random number between 5 and 15 to the score.
   incrementUpScore: function(){
-                      var $scoreSpan = $( "#score" )
-                      var score = parseInt( $scoreSpan.text() );
-                      score += ( Math.floor(Math.random() * 15) + 5);
-                      $scoreSpan.text( score );
+                      // var $scoreSpan = $( "#score" )
+                      // var score = parseInt( $scoreSpan.text() );
+                      this.score += ( Math.floor(Math.random() * 15) + 5);
+                      JC.view.updateScore();
+                      // $scoreSpan.text( score );
                     }
 };
